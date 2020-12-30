@@ -1,0 +1,16 @@
+import matplotlib as plt
+
+def liste(fichier):
+    input_mozaic=open("input.txt","r",encoding="utf8")
+    input_mozaic.readline
+
+    donnees=[]
+
+    for ligne in input_mozaic:
+        a = ligne.strip("\n")
+        donnees.append(a)
+    input_mozaic.close()
+    return donnees
+
+def matrice(liste):
+    donnees=[liste("input.txt")]
