@@ -1,0 +1,28 @@
+import matplotlib as plt
+
+def liste(fichier):
+    input_mozaic=open("input.txt","r",encoding="utf8")
+    input_mozaic.readline
+
+    donnees=[]
+
+    for ligne in input_mozaic:
+        a = ligne.strip("\n")
+        donnees.append(a)
+    input_mozaic.close()
+    return donnees
+
+M=[]
+i,j,num=[],[],[]
+mot=[]
+for l in range(0,19440):
+    b = donnees[l]
+    b = ligne.strip()
+    mot.append(b[0])
+    mot.append(b[1])
+    mot.append(b[2])
+    i.append(mot[0])
+    j.append(mot[1])
+    num.append(mot[2])
+    print(mot)
+    mot=[]
