@@ -1,28 +1,41 @@
-import matplotlib as plt
+#PELOSO
+#MERSADIER
+#nom du fichier: "photomosaic_input.txt"
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
 
 def liste(fichier):
-    input_mozaic=open("input.txt","r",encoding="utf8")
-    input_mozaic.readline
+    with open(fichier,"r",encoding="utf8") as input_mozaic:
+        input_mozaic.readline
+        donnees=[]
+        for ligne in input_mozaic:
+            a=ligne.strip("\n")
+            donnees.append(a)
+        i,j,num=[],[],[]
+        mot=str()
+        for k in range (19440):
+            b,c,d=donnees[k].split(", ")
+            i.append(int(b))
+            j.append(int(c))
+            num.append(int(d))
+        M=np.zeros((108,180),'U3')
+        for l in range (19440):
+            e=str(num[l])
+            if len(e)==2:
+                e="0"+e
+            elif len(e)==1:
+                e="00"+e
+            M[i[l]][j[l]]=e
+            print(M[i[l]][j[l]])
 
-    donnees=[]
+    return M
 
-    for ligne in input_mozaic:
-        a = ligne.strip("\n")
-        donnees.append(a)
-    input_mozaic.close()
-    return donnees
+with open("Photomosaïque.png","w") as mosaic:
 
-M=[]
-i,j,num=[],[],[]
-mot=[]
-for l in range(0,19440):
-    b = donnees[l]
-    b = ligne.strip()
-    mot.append(b[0])
-    mot.append(b[1])
-    mot.append(b[2])
-    i.append(mot[0])
-    j.append(mot[1])
-    num.append(mot[2])
-    print(mot)
-    mot=[]
+plt.figure()
+        plt.imshow(M, interpolation='nearest')
+        plt.axis('off')
+        plt.title('Photomosaïque')
