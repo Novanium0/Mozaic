@@ -32,10 +32,10 @@ x,y,z=donnees[0].split(", ")    '''affectation simultanée des nombres découpé
                                     par une virgule et un espace'''
 
 for l in donnees:               '''parcourt de toutes les
-                                    composantes de donnees'''
+                                    composantes de donnees''' TOTO
 
     i,j,k=l.split(", ")         '''affectation simultanée des nombres
-                                    de chaque ligne une à une'''
+                                    de chaque ligne une à une''' TOTO
 
     if int(i)>int(x):           '''comparaison de la plus grade valeur actuelle
                                     avec la valeur suivante de la 1ère colonne'''
@@ -59,7 +59,7 @@ for l in donnees:                       '''parcourt de toutes les
                                             composantes de donnees'''
 
     i,j,k=l.split(", ")                 '''affectation simultanée des nombres
-                                            de chaque ligne une à une'''
+                                            de chaque ligne une à une''' TOTO
 
     M[int(i),int(j)]=int(k)             '''remplissage de la matrice avec
                                             le numéro des imagettes en
@@ -71,13 +71,13 @@ for l in donnees:                       '''parcourt de toutes les
 
 blanc=[255,255,255]                 '''pixel blanc'''
 
-N=[]                                '''future matrice de pixels blancs'''
+N=[]                                '''future matrice de pixels blancs''' TOTO
 
 for p in range((int(x)+1)*32):      '''les imagettes ont pour
                                         dimension 32x32'''
 
     P=[]                            '''liste vide que l'on vide
-                                        à chaque itération'''
+                                        à chaque itération''' TOTO
     for q in range((int(y)+1)*32):
         P.append(blanc)             '''remplissage de la liste
                                         avec des pixels blancs'''
